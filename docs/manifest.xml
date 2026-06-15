@@ -12,9 +12,7 @@
   <AppDomains>
     <AppDomain>https://jesusmna83.github.io</AppDomain>
   <AppDomain>https://cima.aemps.es</AppDomain>
-  <!-- Si mantienes el fallback CORS de desarrollo:
   <AppDomain>https://api.allorigins.win</AppDomain>
-  -->
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
