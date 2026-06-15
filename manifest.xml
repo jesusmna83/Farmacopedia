@@ -21,7 +21,6 @@
   </Hosts>
   <DefaultSettings>
     <SourceLocation DefaultValue="https://jesusmna83.github.io/Farmacopedia/taskpane.html" />
-    <Url DefaultValue="https://jesusmna83.github.io/Farmacopedia/commands.html" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">

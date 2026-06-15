@@ -7,6 +7,17 @@
 
 const CIMA_BASE = "https://cima.aemps.es";
 
+function useDevProxy() {
+  return window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+}
+
+function toCimaFetchUrl(url) {
+  if (useDevProxy() && typeof url === "string" && url.startsWith(CIMA_BASE)) {
+    return "/cima-api" + url.slice(CIMA_BASE.length);
+  }
+  return url;
+}
+
 // Arranque y enganche del único botón
 Office.onReady((info) => {
   if (info.host === Office.HostType.Word) {
@@ -62,7 +73,7 @@ async function fetchJSON(url, timeoutMs = 12000) {
   const ctrl = new AbortController();
   const to = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const r = await fetch(url, { signal: ctrl.signal, headers: { Accept: "application/json" } });
+    const r = await fetch(toCimaFetchUrl(url), { signal: ctrl.signal, headers: { Accept: "application/json" } });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return await r.json();
   } catch (err) {
@@ -77,7 +88,7 @@ async function fetchText(url, timeoutMs = 15000) {
   const ctrl = new AbortController();
   const to = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const r = await fetch(url, { signal: ctrl.signal, headers: { Accept: "text/html, text/plain" } });
+    const r = await fetch(toCimaFetchUrl(url), { signal: ctrl.signal, headers: { Accept: "text/html, text/plain" } });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return await r.text();
   } catch (err) {
