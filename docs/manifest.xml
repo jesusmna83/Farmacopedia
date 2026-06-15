@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>0cfad8df-81d2-4be8-8af4-cfae6fcbd442</Id>
-  <Version>1.0.2.0</Version>
+  <Version>1.0.3.0</Version>
   <ProviderName>Jesús Nieves-Alonso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Farmacopedia"/>
@@ -76,13 +76,13 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://jesusmna83.github.io/Farmacopedia/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Task Pane"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Farmacopedia"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Farmacopedia"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Farmacopedia"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Farmacopedia está listo. Selecciona un medicamento en Word y pulsa el botón Farmacopedia."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Buscar principio activo e indicaciones en CIMA"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
