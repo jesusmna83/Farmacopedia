@@ -264,18 +264,29 @@ async function getIndicaciones(med) {
   try {
     const docFT = pickDocHtml(med, 1); // Ficha Técnica
     const docP = pickDocHtml(med, 2);  // Prospecto
-    const chosen = docFT || docP;
-    if (!chosen || !chosen.urlHtml) return null;
 
-    const html = await fetchText(chosen.urlHtml);
-    const ind = extractIndicationsFromHTML(html);
-    if (!ind) return null;
+    const docsToTry = [docFT, docP].filter(d => d && d.urlHtml);
 
-    // Limita a 1200 caracteres sin cortar palabra
-    const max = 1200;
-    if (ind.length <= max) return ind;
-    const cut = ind.lastIndexOf(" ", max - 10);
-    return ind.slice(0, cut > 0 ? cut : max).trim() + "…";
+    for (const d of docsToTry) {
+      try {
+        const html = await fetchText(d.urlHtml);
+        const ind = extractIndicationsFromHTML(html);
+
+        if (ind) {
+          // Limita a 1200 caracteres sin cortar palabra
+          const max = 1200;
+          if (ind.length <= max) return ind;
+
+          const cut = ind.slice(0, max);
+          const lastSpace = cut.lastIndexOf(" ");
+          return cut.slice(0, lastSpace > 0 ? lastSpace : max) + "…";
+        }
+      } catch {
+        // Si falla una ficha, probamos la siguiente
+      }
+    }
+
+    return null;
   } catch {
     return null;
   }
