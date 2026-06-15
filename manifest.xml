@@ -2,13 +2,13 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>0cfad8df-81d2-4be8-8af4-cfae6fcbd442</Id>
   <Version>1.0.1.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <ProviderName>Jesús Nieves-Alonso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Farmacopedia"/>
-  <Description DefaultValue="A template to get started."/>
+  <Description DefaultValue="Busca medicamentos en CIMA y añade el principio activo en documentos de Word."/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://github.com/jesusmna83/Farmacopedia"/>
   <AppDomains>
     <AppDomain>https://jesusmna83.github.io</AppDomain>
   <AppDomain>https://cima.aemps.es</AppDomain>

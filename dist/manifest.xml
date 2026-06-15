@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>0cfad8df-81d2-4be8-8af4-cfae6fcbd442</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <Version>1.0.1.0</Version>
+  <ProviderName>Jesús Nieves-Alonso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Farmacopedia"/>
-  <Description DefaultValue="A template to get started."/>
-  <IconUrl DefaultValue="https://www.contoso.com/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://www.contoso.com/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <Description DefaultValue="Busca medicamentos en CIMA y añade el principio activo en documentos de Word."/>
+  <IconUrl DefaultValue="https://jesusmna83.github.io/Farmacopedia/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://jesusmna83.github.io/Farmacopedia/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/jesusmna83/Farmacopedia"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
-    <AppDomain>https://cima.aemps.es</AppDomain>
+    <AppDomain>https://jesusmna83.github.io</AppDomain>
+  <AppDomain>https://cima.aemps.es</AppDomain>
+  <!-- Si mantienes el fallback CORS de desarrollo:
+  <AppDomain>https://api.allorigins.win</AppDomain>
+  -->
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://www.contoso.com/taskpane.html"/>
+    <SourceLocation DefaultValue="https://jesusmna83.github.io/Farmacopedia/taskpane.html" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -63,14 +66,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://www.contoso.com/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://www.contoso.com/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://www.contoso.com/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://jesusmna83.github.io/Farmacopedia/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://jesusmna83.github.io/Farmacopedia/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://jesusmna83.github.io/Farmacopedia/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://www.contoso.com/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://www.contoso.com/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://jesusmna83.github.io/Farmacopedia/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://jesusmna83.github.io/Farmacopedia/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
